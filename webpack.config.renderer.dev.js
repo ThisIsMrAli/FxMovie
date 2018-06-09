@@ -217,6 +217,9 @@ export default merge.smart(baseConfig, {
     new webpack.HotModuleReplacementPlugin({
       multiStep: true
     }),
+    new webpack.DefinePlugin({
+      'process.env.FLUENTFFMPEG_COV': false
+    }),
 
     new webpack.NoEmitOnErrorsPlugin(),
 
